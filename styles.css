@@ -1,62 +1,119 @@
+/* Reset some default browser styles for consistency */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    background: #f7f9fa;
+    color: #222;
+}
+
+/* Make images responsive */
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navbar styles */
 .navbar {
-    display: flex; /* Uses flexbox for layout */
-    justify-content: space-between; /* Spaces items to the ends */
-    align-items: center; /* Vertically centers items */
-    background-color: #94b7cd; /* Sets navbar background color */
-    padding: 10px 30px; /* Adds space inside the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #94b7cd;
+    padding: 10px 5vw;
+    flex-wrap: wrap;
 }
 
 .nav-logo {
-    display: flex; /* Uses flexbox for horizontal layout */
-    align-items: center; /* Vertically centers logo and text */
+    display: flex;
+    align-items: center;
+    min-width: 0;
 }
 
 .company-name {
-    color: #fff; /* Sets text color to white */
-    font-size: 1.5em; /* Increases font size */
-    font-weight: bold; /* Makes text bold */
-    margin-left: 15px; /* Adds space to the left of the logo */
-    font-family: 'Times New Roman', Times, serif; /* Serif font */
-    letter-spacing: 1px; /* Adds spacing between letters */
-}
-
-.nav-links a {
-    margin-right: 20px; /* Adds space between links */
-    text-decoration: none; /* Removes underline from links */
-    color: #ffffff; /* Sets link color to white */
-    font-weight: 500; /* Medium font weight */
-    font-size: 1.1em; /* Slightly larger font */
-}
-
-.nav-links a:last-child {
-    margin-right: 0;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.08);
 }
 
 .nav-logo img {
-    height: 60px; /* Sets logo height */
-    width: auto; /* Maintains aspect ratio */
+    height: 48px;
+    width: auto;
 }
 
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background: #b6c9d7;
+    color: #222;
+    outline: none;
+}
+
+/* Hamburger menu for mobile */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 3vw;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+    .company-name {
+        font-size: 1em;
+    }
+    .nav-logo img {
+        height: 38px;
+    }
+}
+
+/* Hero section styles */
 .hero {
-    width: 50;
+    width: 100%;
     overflow: hidden;
     margin-bottom: 30px;
 }
 
 .hero-image {
-    width: 99%;
-    height: 550px;
-    object-fit: cover; /* Cover the entire area */
-    display: block; 
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    display: block;
     margin: 0 auto;
     border-radius: 10px;
+    background: #b6c9d7;
 }
 
+/* Company summary section */
 .company-summary {
     background-color: #b6c9d7;
-    color: #f5f5f5; /* Light gray/white text */
+    color: #f5f5f5;
     font-family: 'Times New Roman', Times, serif;
-    padding: 40px 20px;
+    padding: 40px 5vw;
     margin: 0 auto 30px auto;
     border-radius: 10px;
     max-width: 900px;
@@ -77,15 +134,16 @@
     color: #f5f5f5;
 }
 
+/* Contact info section */
 .contact-info {
     background-color: #94b7cd;
     color: #f5f5f5;
     font-family: 'Times New Roman', Times, serif;
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
     margin: 0;
     border-radius: 0;
-    max-width: 100%;
-    width: auto;
+    max-width: 100vw;
+    width: 100vw;
     text-align: center;
     box-shadow: none;
     position: relative;
@@ -105,21 +163,124 @@
     font-size: 1.1em;
     line-height: 1.6;
     color: #f5f5f5;
+    word-break: break-word;
 }
 
 .contact-info a {
     color: #f5f5f5;
     text-decoration: underline;
+    word-break: break-all;
 }
 
-/* Add to styles.css or create a new CSS file */
-/* ...existing code... */
+.contact-separator {
+    border: none;
+    border-top: 2px solid #f5f5f5;
+    width: 60px;
+    margin: 16px auto 24px auto;
+}
 
+/* Forms container for side-by-side layout */
+.forms-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto 30px auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Form sections */
+.contact-form-section, .appointment-section {
+    background: #b6c9d7;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 32px 2vw 32px 2vw;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    flex: 1 1 350px;
+    min-width: 300px;
+    max-width: 600px;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+/* Responsive iframes for Google Forms */
+.contact-form-section iframe,
+.appointment-section iframe {
+    width: 100%;
+    min-width: 250px;
+    border: none;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* Responsive: stack forms vertically on small screens */
+@media (max-width: 1100px) {
+    .forms-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .contact-form-section, .appointment-section {
+        max-width: 98vw;
+        min-width: 0;
+        padding: 24px 2vw;
+    }
+}
+
+/* Responsive font and padding for mobile */
+@media (max-width: 600px) {
+    .company-summary,
+    .contact-form-section,
+    .appointment-section {
+        padding: 18px 2vw;
+        font-size: 0.98em;
+    }
+    .vehicles-hero {
+        padding: 24px 2vw 12px 2vw;
+    }
+    .vehicle-card {
+        width: 95vw;
+        min-width: 0;
+        max-width: 99vw;
+    }
+}
+
+/* Note text below forms */
+.note {
+    font-size: 0.95em;
+    color: #555;
+    margin: 18px auto 0 auto;
+    text-align: center;
+    max-width: 700px;
+}
+
+/* Footer styles */
+.footer {
+    background: #b6c9d7;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0 10px 0;
+    font-size: 1em;
+    margin-top: 40px;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+/* Vehicles page styles */
 .vehicles-hero {
     background-color: #b6c9d7;
     color: #f5f5f5;
     text-align: center;
-    padding: 40px 20px 20px 20px;
+    padding: 40px 5vw 20px 5vw;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -128,7 +289,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    padding: 40px 20px;
+    padding: 40px 2vw;
     background: #f7f9fa;
 }
 
@@ -138,9 +299,12 @@
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     width: 300px;
+    min-width: 220px;
+    max-width: 98vw;
     padding: 20px;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
 }
 
 .vehicle-card img {
@@ -161,101 +325,5 @@
     font-size: 1em;
     color: #f5f5f5;
     line-height: 1.5;
-}
-
-/* ...existing code... */
-
-
-/* Add to styles.css or extend existing styles */
-
-/* Contact Form Section */
-.contact-form-section, .appointment-section {
-    background: #b6c9d7;
-    color: #fff;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 40px 20px;
-    margin: 0 auto 30px auto;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    text-align: center;
-}
-
-.contact-form, .appointment-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.contact-form label, .appointment-form label {
-    text-align: left;
-    font-weight: bold;
-}
-
-/* Styles the input and textarea fields in the forms */
-.contact-form input, .contact-form textarea,
-.appointment-form input, .appointment-form textarea {
-    padding: 8px; /* Adds padding inside fields */
-    border: none; /* Removes border */
-    border-radius: 5px; /* Rounds the corners */
-    font-size: 1em; /* Sets font size */
-}
-
-/* Styles the submit buttons in the forms */
-.contact-form button, .appointment-form button {
-    background: #94b7cd; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none; /* Removes border */
-    padding: 12px; /* Adds padding inside button */
-    border-radius: 5px; /* Rounds the corners */
-    font-size: 1.1em; /* Increases font size */
-    cursor: pointer; /* Shows pointer on hover */
-    margin-top: 10px; /* Adds space above button */
-}
-
-/* Changes button color on hover */
-.contact-form button:hover, .appointment-form button:hover {
-    background: #7aa5bb; /* Darker background on hover */
-}
-
-/* Styles the note text below the appointment form */
-.note {
-    font-size: 0.95em; /* Slightly smaller font */
-    color: #f5f5f5; /* Light gray text color */
-    margin-top: 15px; /* Adds space above the note */
-}
-
-/* Styles the horizontal line under the contact info heading */
-.contact-separator {
-    border: none; /* Removes default border */
-    border-top: 2px solid #f5f5f5; /* Adds a solid top border */
-    width: 60px; /* Sets the width of the line */
-    margin: 16px auto 24px auto; /* Centers the line and adds spacing */
-}
-
-/* Container to display the forms side by side */
-.forms-container {
-    display: flex;                /* Arrange children in a row */
-    flex-wrap: wrap;              /* Allow wrapping on small screens */
-    justify-content: center;      /* Center the forms horizontally */
-    gap: 30px;                    /* Space between forms */
-    max-width: 1300px;            /* Maximum width for the container */
-    margin: 0 auto 30px auto;     /* Center container and add bottom margin */
-}
-
-/* Each form section takes equal width and stacks on small screens */
-.contact-form-section, .appointment-section {
-    flex: 1 1 350px;              /* Grow, shrink, and base width */
-    min-width: 320px;             /* Minimum width for each form */
-    max-width: 600px;             /* Maximum width for each form */
-    margin: 0;                    /* Remove default margin */
-}
-
-/* Responsive: stack forms vertically on small screens */
-@media (max-width: 900px) {
-    .forms-container {
-        flex-direction: column;   /* Stack forms vertically */
-        align-items: center;      /* Center forms */
-    }
+    word-break: break-word;
 }
