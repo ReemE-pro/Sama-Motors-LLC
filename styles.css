@@ -1,29 +1,31 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #94b7cd;
-    padding: 10px 30px;
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Spaces items to the ends */
+    align-items: center; /* Vertically centers items */
+    background-color: #94b7cd; /* Sets navbar background color */
+    padding: 10px 30px; /* Adds space inside the navbar */
 }
+
 .nav-logo {
-    display: flex;
-    align-items: center;
+    display: flex; /* Uses flexbox for horizontal layout */
+    align-items: center; /* Vertically centers logo and text */
 }
 
 .company-name {
-    color: #fff;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-left: 15px;
-    font-family: 'Times New Roman', Times, serif;
-    letter-spacing: 1px;
+    color: #fff; /* Sets text color to white */
+    font-size: 1.5em; /* Increases font size */
+    font-weight: bold; /* Makes text bold */
+    margin-left: 15px; /* Adds space to the left of the logo */
+    font-family: 'Times New Roman', Times, serif; /* Serif font */
+    letter-spacing: 1px; /* Adds spacing between letters */
 }
+
 .nav-links a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 1.1em;
+    margin-right: 20px; /* Adds space between links */
+    text-decoration: none; /* Removes underline from links */
+    color: #ffffff; /* Sets link color to white */
+    font-weight: 500; /* Medium font weight */
+    font-size: 1.1em; /* Slightly larger font */
 }
 
 .nav-links a:last-child {
@@ -31,10 +33,10 @@
 }
 
 .nav-logo img {
-    height: 60px;
-    width: auto;
-    object-fit: contain;
+    height: 60px; /* Sets logo height */
+    width: auto; /* Maintains aspect ratio */
 }
+
 .hero {
     width: 50;
     overflow: hidden;
@@ -191,24 +193,69 @@
     font-weight: bold;
 }
 
-/* ...existing code... *//* ...existing code... */
+/* Styles the input and textarea fields in the forms */
+.contact-form input, .contact-form textarea,
+.appointment-form input, .appointment-form textarea {
+    padding: 8px; /* Adds padding inside fields */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounds the corners */
+    font-size: 1em; /* Sets font size */
+}
 
-/* Group the forms side by side on larger screens */
+/* Styles the submit buttons in the forms */
+.contact-form button, .appointment-form button {
+    background: #94b7cd; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Removes border */
+    padding: 12px; /* Adds padding inside button */
+    border-radius: 5px; /* Rounds the corners */
+    font-size: 1.1em; /* Increases font size */
+    cursor: pointer; /* Shows pointer on hover */
+    margin-top: 10px; /* Adds space above button */
+}
+
+/* Changes button color on hover */
+.contact-form button:hover, .appointment-form button:hover {
+    background: #7aa5bb; /* Darker background on hover */
+}
+
+/* Styles the note text below the appointment form */
+.note {
+    font-size: 0.95em; /* Slightly smaller font */
+    color: #f5f5f5; /* Light gray text color */
+    margin-top: 15px; /* Adds space above the note */
+}
+
+/* Styles the horizontal line under the contact info heading */
+.contact-separator {
+    border: none; /* Removes default border */
+    border-top: 2px solid #f5f5f5; /* Adds a solid top border */
+    width: 60px; /* Sets the width of the line */
+    margin: 16px auto 24px auto; /* Centers the line and adds spacing */
+}
+
+/* Container to display the forms side by side */
 .forms-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1300px;
-    margin: 0 auto 30px auto;
+    display: flex;                /* Arrange children in a row */
+    flex-wrap: wrap;              /* Allow wrapping on small screens */
+    justify-content: center;      /* Center the forms horizontally */
+    gap: 30px;                    /* Space between forms */
+    max-width: 1300px;            /* Maximum width for the container */
+    margin: 0 auto 30px auto;     /* Center container and add bottom margin */
 }
 
-/* Make sure each form section takes equal width and stacks on small screens */
+/* Each form section takes equal width and stacks on small screens */
 .contact-form-section, .appointment-section {
-    flex: 1 1 350px;
-    min-width: 320px;
-    max-width: 600px;
-    margin: 0;
+    flex: 1 1 350px;              /* Grow, shrink, and base width */
+    min-width: 320px;             /* Minimum width for each form */
+    max-width: 600px;             /* Maximum width for each form */
+    margin: 0;                    /* Remove default margin */
 }
 
-/* ...existing code... */
+/* Responsive: stack forms vertically on small screens */
+@media (max-width: 900px) {
+    .forms-container {
+        flex-direction: column;   /* Stack forms vertically */
+        align-items: center;      /* Center forms */
+    }
+}
