@@ -93,19 +93,26 @@ img, iframe {
 
 /* Hero section styles */
 .hero {
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 30px;
+    width: 100vw;           /* Make the hero section span the full viewport width */
+    height: 650px;          /* Set the height of the hero section */
+    margin: auto;              /* Remove default margin */
+    padding: auto;             /* Remove default padding */
+    overflow: hidden;       /* Hide any overflow from the image */
+    position: relative;     /* Establish a positioning context for child elements */
 }
 
 .hero-image {
-    width: 100%;
-    height: 350px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    background: #b6c9d7;
+    width: 100vw;               /* Make the image span the full viewport width */
+    height: 650px;              /* Set the image height to match the hero section */
+    object-fit: cover;          /* Ensure the image covers the area, cropping if needed */
+    display: block;             /* Remove inline spacing below the image */
+    margin: auto;                  /* Remove default margin */
+    padding: auto;                 /* Remove default padding */
+    border-radius: 0;           /* Remove any rounded corners */
+    background: none;           /* No background color */
+    box-sizing: border-box;     /* Include border and padding in width/height */
+    transform: scale(0.85);     /* Zoom out the image to show more of it */
+    transform-origin: center center; /* Keep the zoom centered on the image */
 }
 
 /* Company summary section */
@@ -206,6 +213,32 @@ img, iframe {
     max-width: 600px;
     box-sizing: border-box;
     overflow-x: auto;
+}
+
+/* Make embedded Google Forms fully responsive and autofit their container */
+.contact-form-section iframe,
+.appointment-section iframe {
+    width: 100%;
+    min-width: 250px;
+    height: 100vh;           /* Use viewport height to ensure full form is visible */
+    min-height: 600px;       /* Minimum height for usability */
+    max-height: 1200px;      /* Prevent excessive height on large screens */
+    border: none;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    display: block;
+    overflow: auto;          /* Allow iframe to expand, not scroll */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 900px) {
+    .contact-form-section iframe,
+    .appointment-section iframe {
+        height: 90vh;        /* Slightly less height on small screens */
+        min-height: 500px;
+        max-height: none;
+    }
 }
 
 /* Responsive iframes for Google Forms */
