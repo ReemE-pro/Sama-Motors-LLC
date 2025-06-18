@@ -191,35 +191,6 @@
     font-weight: bold;
 }
 
-.contact-form input, .contact-form textarea,
-.appointment-form input, .appointment-form textarea {
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.contact-form button, .appointment-form button {
-    background: #94b7cd;
-    color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.contact-form button:hover, .appointment-form button:hover {
-    background: #7aa5bb;
-}
-
-.note {
-    font-size: 0.95em;
-    color: #f5f5f5;
-    margin-top: 15px;
-}
-
 /* ...existing code... *//* ...existing code... */
 
 /* Group the forms side by side on larger screens */
