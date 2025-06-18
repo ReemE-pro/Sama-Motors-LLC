@@ -2,10 +2,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #b6c9d7;
+    background-color: #94b7cd;
     padding: 10px 30px;
 }
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
 
+.company-name {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+}
 .nav-links a {
     margin-right: 20px;
     text-decoration: none;
@@ -19,20 +31,213 @@
 }
 
 .nav-logo img {
-    height: 50px;
+    height: 60px;
     width: auto;
     object-fit: contain;
 }
 .hero {
-    width: 100%;
+    width: 50;
     overflow: hidden;
     margin-bottom: 30px;
 }
 
 .hero-image {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    display: block;
+    width: 99%;
+    height: 550px;
+    object-fit: cover; /* Cover the entire area */
+    display: block; 
     margin: 0 auto;
     border-radius: 10px;
+}
+
+.company-summary {
+    background-color: #b6c9d7;
+    color: #f5f5f5; /* Light gray/white text */
+    font-family: 'Times New Roman', Times, serif;
+    padding: 40px 20px;
+    margin: 0 auto 30px auto;
+    border-radius: 10px;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.company-summary h2 {
+    margin-bottom: 18px;
+    font-size: 2em;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.company-summary p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #f5f5f5;
+}
+
+.contact-info {
+    background-color: #94b7cd;
+    color: #f5f5f5;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px 0 20px 0;
+    margin: 0;
+    border-radius: 0;
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+    box-shadow: none;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+
+.contact-info h2 {
+    margin-bottom: 18px;
+    font-size: 2em;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #f5f5f5;
+}
+
+.contact-info a {
+    color: #f5f5f5;
+    text-decoration: underline;
+}
+
+/* Add to styles.css or create a new CSS file */
+/* ...existing code... */
+
+.vehicles-hero {
+    background-color: #b6c9d7;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.vehicle-inventory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background: #f7f9fa;
+}
+
+.vehicle-card {
+    background: #94b7cd;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.vehicle-card h2 {
+    margin: 10px 0 8px 0;
+    font-size: 1.3em;
+    color: #fff;
+}
+
+.vehicle-card p {
+    font-size: 1em;
+    color: #f5f5f5;
+    line-height: 1.5;
+}
+
+/* ...existing code... */
+
+
+/* Add to styles.css or extend existing styles */
+
+/* Contact Form Section */
+.contact-form-section, .appointment-section {
+    background: #b6c9d7;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 40px 20px;
+    margin: 0 auto 30px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.contact-form, .appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form label, .appointment-form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea,
+.appointment-form input, .appointment-form textarea {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button, .appointment-form button {
+    background: #94b7cd;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-form button:hover, .appointment-form button:hover {
+    background: #7aa5bb;
+}
+
+.note {
+    font-size: 0.95em;
+    color: #f5f5f5;
+    margin-top: 15px;
+}
+
+/* ...existing code... *//* ...existing code... */
+
+/* Group the forms side by side on larger screens */
+.forms-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto 30px auto;
+}
+
+/* Make sure each form section takes equal width and stacks on small screens */
+.contact-form-section, .appointment-section {
+    flex: 1 1 350px;
+    min-width: 320px;
+    max-width: 600px;
+    margin: 0;
+}
+
+/* ...existing code... */

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Sama Motors LLC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="img/SamaMotorsLLC.LogoS.png" class="logo" alt="Sama Motors LLC Logo">
+            <span class="company-name">Sama Motors LLC</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Vehicles.html">Vehicles</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <hr class="contact-separator">
+        <p><strong>Address:</strong> 4133 Spring Garden St, Greensboro, NC 27407</p>
+        <p><strong>Email:</strong> <a href="mailto:amani01602@hotmail.com">amani01602@hotmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+13367406784">+1 (336) 740-6784</a></p>
+    </section>
+    
+    <div class="forms-container">
+        <section class="contact-form-section">
+            <h2>Contact Us</h2>
+            <form class="contact-form" action="mailto:amani01602@hotmail.com" method="POST" enctype="text/plain">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    
+        <section class="appointment-section">
+            <h2>Set an Appointment to View a Vehicle</h2>
+            <form class="appointment-form" action="mailto:amani01602@hotmail.com" method="POST" enctype="text/plain">
+                <label for="client-name">Your Name:</label>
+                <input type="text" id="client-name" name="client-name" required>
+    
+                <label for="client-email">Your Email:</label>
+                <input type="email" id="client-email" name="client-email" required>
+    
+                <label for="vehicle">Vehicle to View:</label>
+                <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Toyota Camry 2018" required>
+    
+                <label for="appointment-date">Preferred Date:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+    
+                <label for="appointment-time">Preferred Time:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+    
+                <button type="submit">Request Appointment</button>
+            </form>
+            <p class="note">* Appointment requests will be reviewed and you will receive a confirmation or denial by email.</p>
+        </section>
+    </div>
+    <!-- ...existing code...
+</body>
+</html>
